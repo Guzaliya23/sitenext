@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SiteNext — сначала увидите, потом решите</title>
+  <meta name="description" content="Вставьте ссылку на сайт — бесплатно покажем, как он может выглядеть. Без обязательств." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Photo canopy wall — drops down -->
+  <div class="canopy" id="canopy" aria-hidden="true">
+    <div class="canopy-track">
+      <img src="assets/canopy-strip.png" alt="" width="1800" height="260" decoding="async" />
+      <img src="assets/canopy-strip.png" alt="" width="1800" height="260" decoding="async" />
+      <img src="assets/canopy-strip.png" alt="" width="1800" height="260" decoding="async" />
+    </div>
+  </div>
+
+  <!-- Vine to hero form level + lotus -->
+  <div class="vine" id="vine" aria-hidden="true">
+    <svg class="vine-svg" viewBox="0 0 200 920" preserveAspectRatio="xMidYMin meet">
+      <path class="vine-stem vine-stem--main" pathLength="1" fill="none" stroke-linecap="round" stroke-linejoin="round"
+        d="M130 8
+           C 165 70, 95 130, 140 210
+           C 185 290, 90 350, 145 440
+           C 195 530, 85 590, 140 680
+           C 175 740, 120 780, 125 820" />
+      <path class="vine-stem vine-stem--side" pathLength="1" fill="none" stroke-linecap="round"
+        d="M140 210 C 80 250, 50 290, 60 340
+           M145 440 C 200 475, 210 520, 185 560
+           M140 680 C 85 710, 55 750, 70 790" />
+      <g class="vine-foliage" id="vineFoliage">
+        <ellipse class="leaf" data-at="0.1" cx="150" cy="120" rx="22" ry="11" fill="#4fa66a" transform="rotate(-40 150 120)" />
+        <ellipse class="leaf" data-at="0.16" cx="100" cy="180" rx="26" ry="12" fill="#3d7d50" transform="rotate(35 100 180)" />
+        <ellipse class="leaf" data-at="0.22" cx="165" cy="240" rx="24" ry="12" fill="#5bb875" transform="rotate(-25 165 240)" />
+        <ellipse class="leaf" data-at="0.28" cx="75" cy="300" rx="25" ry="12" fill="#2f6b42" transform="rotate(48 75 300)" />
+        <ellipse class="leaf" data-at="0.34" cx="175" cy="360" rx="27" ry="13" fill="#4fa66a" transform="rotate(-45 175 360)" />
+        <ellipse class="leaf" data-at="0.42" cx="105" cy="430" rx="23" ry="11" fill="#3d7d50" transform="rotate(30 105 430)" />
+        <ellipse class="leaf" data-at="0.5" cx="185" cy="500" rx="26" ry="12" fill="#5bb875" transform="rotate(-20 185 500)" />
+        <ellipse class="leaf" data-at="0.58" cx="90" cy="570" rx="28" ry="13" fill="#2f6b42" transform="rotate(40 90 570)" />
+        <ellipse class="leaf" data-at="0.66" cx="170" cy="640" rx="24" ry="12" fill="#4fa66a" transform="rotate(-35 170 640)" />
+        <ellipse class="leaf" data-at="0.74" cx="100" cy="710" rx="25" ry="12" fill="#3d7d50" transform="rotate(28 100 710)" />
+        <ellipse class="leaf" data-at="0.82" cx="155" cy="770" rx="22" ry="11" fill="#5bb875" transform="rotate(-30 155 770)" />
+        <circle class="bloom bloom--rose" data-at="0.4" cx="70" cy="320" r="7" />
+        <circle class="bloom bloom--lilac" data-at="0.62" cx="195" cy="540" r="7" />
+        <circle class="bloom bloom--sky" data-at="0.78" cx="80" cy="730" r="6" />
+      </g>
+    </svg>
+
+    <div class="lotus" id="lotus">
+      <svg class="lotus-svg" viewBox="0 0 120 120" aria-hidden="true">
+        <g class="lotus-petals">
+          <ellipse class="petal petal-1" cx="60" cy="52" rx="14" ry="32" />
+          <ellipse class="petal petal-2" cx="60" cy="52" rx="14" ry="32" />
+          <ellipse class="petal petal-3" cx="60" cy="52" rx="14" ry="32" />
+          <ellipse class="petal petal-4" cx="60" cy="52" rx="14" ry="32" />
+          <ellipse class="petal petal-5" cx="60" cy="52" rx="14" ry="32" />
+          <ellipse class="petal petal-6" cx="60" cy="52" rx="14" ry="32" />
+          <ellipse class="petal petal-7" cx="60" cy="52" rx="13" ry="28" />
+          <ellipse class="petal petal-8" cx="60" cy="52" rx="13" ry="28" />
+        </g>
+        <circle class="lotus-center" cx="60" cy="58" r="10" />
+        <circle class="lotus-glow" cx="60" cy="58" r="18" />
+      </svg>
+      <span class="lotus-hint">наведи</span>
+    </div>
+  </div>
+
+  <div class="glow" id="glow" aria-hidden="true">
+    <span class="glow-spot glow-spot--rose"></span>
+    <span class="glow-spot glow-spot--lilac"></span>
+    <span class="glow-spot glow-spot--sky"></span>
+    <span class="glow-spot glow-spot--wood"></span>
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+    <span class="orb orb--4"></span>
+    <span class="orb orb--5"></span>
+  </div>
+
+  <header class="site-nav" id="siteNav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Site<span>Next</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#story">История</a>
+        <a href="#more">Ещё</a>
+        <a href="#request">Ссылка</a>
+      </nav>
+      <a class="nav-cta" href="#leadTop">Попробовать</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню" type="button"><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="hero-invite reveal">Открытое приглашение для владельца бизнеса</p>
+          <h1 class="reveal">
+            <span class="hero-line">Ваш сайт может</span>
+            <span class="hero-line hero-line--accent">расцвести заново</span>
+          </h1>
+          <p class="hero-lead reveal">
+            Хороший сайт повышает конверсию — иногда в&nbsp;1,5–2&nbsp;раза.
+            Сначала бесплатно покажем, как может выглядеть ваша главная. Потом — если зайдёт — полный сайт.
+          </p>
+          <p class="hero-hint reveal">Лиана ведёт к форме · лотос раскрывается от курсора</p>
+        </div>
+
+        <div class="hero-form invite-card reveal" id="leadTop">
+          <p class="section-eyebrow">Сразу к делу</p>
+          <h2>Вставьте ссылку на сайт</h2>
+          <p class="invite-lead">Откроется Telegram с готовым текстом заявки.</p>
+          <form class="lead-form" data-lead-form>
+            <label>
+              <span>Ссылка на сайт</span>
+              <input type="url" name="website" placeholder="https://example.ru" required />
+            </label>
+            <label>
+              <span>Имя или компания</span>
+              <input type="text" name="name" placeholder="Необязательно" />
+            </label>
+            <label>
+              <span>Telegram или телефон</span>
+              <input type="text" name="contact" placeholder="@username или +7…" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Получить визуализацию</button>
+            <p class="form-hint">Бесплатно · без обязательств</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="story">
+      <div class="container chapter-grid">
+        <article class="chapter-card chapter-card--right reveal" data-side="right">
+          <span class="chapter-mark">01</span>
+          <h2>Вы присылаете ссылку</h2>
+          <p>Никакого ТЗ на двадцать страниц. Просто адрес сайта — и мы уже понимаем, с чем работать.</p>
+        </article>
+        <article class="chapter-card chapter-card--left chapter-card--wood reveal" data-side="left">
+          <span class="chapter-mark">02</span>
+          <h2>Мы собираем демо</h2>
+          <p>1–2 современные страницы на ваших текстах и фото. Бесплатно. Чтобы глаза увидели, а не только уши услышали.</p>
+          <div class="chapter-photo">
+            <img src="assets/warm-workspace.jpg" alt="Тёплый рабочий стол с ноутбуком" width="1400" height="933" loading="lazy" decoding="async" />
+          </div>
+        </article>
+        <article class="chapter-card chapter-card--right chapter-card--rose reveal" data-side="right">
+          <span class="chapter-mark">03</span>
+          <h2>Вы смотрите спокойно</h2>
+          <p>Не зашло — просто закрываете. Без звонков «ну как вам?» и давления. Зашло — идём дальше.</p>
+          <div class="chapter-photo chapter-photo--sm">
+            <img src="assets/warm-laptop.jpg" alt="Ноутбук за работой над сайтом" width="1400" height="932" loading="lazy" decoding="async" />
+          </div>
+        </article>
+        <article class="chapter-card chapter-card--left chapter-card--lilac reveal" data-side="left">
+          <span class="chapter-mark">04</span>
+          <h2>Потом — цена и полный сайт</h2>
+          <p>Сверяем рынок по похожему объёму и предлагаем доступную стоимость. Можно добавить бота или CRM.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="more">
+      <div class="container more-grid">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Рядом с сайтом</p>
+          <h2>Бот, CRM, полный редизайн</h2>
+          <p>Если нужно не только «красиво», а чтобы заявки не терялись — тоже поможем.</p>
+        </div>
+        <div class="pills reveal">
+          <span class="pill pill--rose">Telegram-боты</span>
+          <span class="pill pill--lilac">CRM и воронки</span>
+          <span class="pill pill--sky">Полный сайт</span>
+          <span class="pill pill--wood">Доступная цена</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="request">
+      <div class="container">
+        <div class="invite-card invite-card--bottom reveal">
+          <div class="invite-ornament" aria-hidden="true">❀</div>
+          <p class="section-eyebrow">Ещё раз, если пролистали</p>
+          <h2>Пришлите ссылку — покажем, как может быть</h2>
+          <p class="invite-lead">Откроется Telegram с готовым текстом — останется нажать «отправить».</p>
+          <form class="lead-form" data-lead-form>
+            <label>
+              <span>Ссылка на сайт</span>
+              <input type="url" name="website" placeholder="https://example.ru" required />
+            </label>
+            <div class="form-row">
+              <label>
+                <span>Имя или компания</span>
+                <input type="text" name="name" placeholder="Необязательно" />
+              </label>
+              <label>
+                <span>Telegram или телефон</span>
+                <input type="text" name="contact" placeholder="@username или +7…" required />
+              </label>
+            </div>
+            <button class="btn btn-primary" type="submit">Получить визуализацию</button>
+            <p class="form-hint">Бесплатно · без обязательств · 1–2 страницы</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© SiteNext</div>
+      <a href="#leadTop">Оставить ссылку</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
