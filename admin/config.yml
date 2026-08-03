@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: Guzaliya23/sitenext
+  branch: main
+
+# Локально (опционально): раскомментируйте, если правите через localhost
+# local_backend: true
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+locale: ru
+
+collections:
+  - name: pages
+    label: Страницы
+    files:
+      - name: home
+        label: Главная страница
+        file: content/home.json
+        fields:
+          - { label: Title вкладки браузера, name: meta_title, widget: string }
+          - { label: Описание для поиска, name: meta_description, widget: text }
+          - { label: Бренд в шапке, name: brand, widget: string }
+          - { label: Кнопка в меню, name: nav_cta, widget: string }
+
+          - { label: "Hero — заголовок", name: hero_title, widget: string }
+          - { label: "Hero — текст", name: hero_lead, widget: text }
+          - { label: "Hero — основная кнопка", name: hero_btn_primary, widget: string }
+          - { label: "Hero — вторая кнопка", name: hero_btn_secondary, widget: string }
+
+          - { label: Строка доверия, name: trust_line, widget: string }
+
+          - { label: "Почему — заголовок", name: why_title, widget: string }
+          - { label: "Почему — подзаголовок", name: why_lead, widget: text }
+          - { label: "Карточка 1 — заголовок", name: card1_title, widget: string }
+          - { label: "Карточка 1 — текст", name: card1_text, widget: text }
+          - { label: "Карточка 2 — заголовок", name: card2_title, widget: string }
+          - { label: "Карточка 2 — текст", name: card2_text, widget: text }
+          - { label: "Карточка 3 — заголовок", name: card3_title, widget: string }
+          - { label: "Карточка 3 — текст", name: card3_text, widget: text }
+
+          - { label: "Как работает — заголовок", name: how_title, widget: string }
+          - { label: "Как работает — подзаголовок", name: how_lead, widget: text }
+          - { label: "Шаг 1", name: step1, widget: string }
+          - { label: "Шаг 2", name: step2, widget: string }
+          - { label: "Шаг 3", name: step3, widget: string }
+          - { label: "Шаг 4", name: step4, widget: string }
+
+          - { label: "Форма — заголовок", name: form_title, widget: string }
+          - { label: "Форма — текст", name: form_lead, widget: text }
+          - { label: "Форма — кнопка", name: form_btn, widget: string }
+          - { label: "Форма — подсказка", name: form_hint, widget: string }
+
+          - { label: "Цена — заголовок", name: price_title, widget: string }
+          - { label: "Цена — текст", name: price_text, widget: text }
+          - { label: "Цена — кнопка", name: price_btn, widget: string }
+
+          - { label: "Форма внизу — заголовок", name: form2_title, widget: string }
+          - { label: "Форма внизу — текст", name: form2_lead, widget: text }
+          - { label: "Форма внизу — кнопка", name: form2_btn, widget: string }
+
+          - { label: "Подвал", name: footer_copy, widget: string }
+          - { label: "Telegram без @", name: telegram, widget: string, hint: "Например guzaliay_g" }
