@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мы живые — карта маршрута</title>
+  <meta name="description" content="Интерактивный хронологический маршрут по местам романа Айн Рэнд «Мы живые» на карте Петрограда / Ленинграда." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="keyScreen" hidden>
+    <div class="key-card">
+      <p class="eyebrow">Literary map</p>
+      <h1>Мы живые</h1>
+      <p>Не найден ключ Яндекс.Карт. Добавь его в <code>js/config.js</code> или вставь ниже.</p>
+      <form id="keyForm">
+        <label>
+          API-ключ
+          <input id="apiKeyInput" type="password" autocomplete="off" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
+        </label>
+        <p class="key-error" id="keyError"></p>
+        <div class="key-actions">
+          <button class="btn btn-primary" type="submit">Открыть карту</button>
+          <button class="btn btn-ghost" type="button" id="browseWithoutMap">Только список</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="app" hidden>
+    <aside class="panel">
+      <header class="panel-head">
+        <p class="eyebrow">Хронологический маршрут</p>
+        <h1 id="bookTitle">Мы живые</h1>
+        <p class="meta" id="bookMeta"></p>
+        <p class="disclaimer" id="bookDisclaimer"></p>
+        <div class="legend" aria-label="Точность точек">
+          <span class="legend-item"><i class="dot high"></i> Точная</span>
+          <span class="legend-item"><i class="dot medium"></i> Ориентир</span>
+          <span class="legend-item"><i class="dot atmospheric"></i> Атмосферная</span>
+        </div>
+      </header>
+
+      <div class="controls">
+        <button class="btn" type="button" id="btnPrev">← Назад</button>
+        <button class="btn btn-primary" type="button" id="btnPlay">Далее →</button>
+        <button class="btn" type="button" id="btnNext">Вперёд</button>
+      </div>
+
+      <article class="card" id="card">
+        <div class="card-top">
+          <p class="card-step" id="cardStep">1 / 14</p>
+          <span class="confidence" id="cardConfidence"></span>
+        </div>
+        <h2 id="cardTitle">—</h2>
+        <p class="card-sub" id="cardSubtitle"></p>
+        <dl class="card-grid">
+          <div><dt>Эпизод</dt><dd id="cardChapter"></dd></div>
+          <div><dt>Сейчас</dt><dd id="cardToday"></dd></div>
+          <div><dt>Тогда</dt><dd id="cardThen"></dd></div>
+        </dl>
+        <p class="label">Что это за место</p>
+        <p id="cardSummary"></p>
+        <p class="label">События в романе</p>
+        <p id="cardEvents"></p>
+        <p class="label">Почему точка здесь</p>
+        <p id="cardWhy"></p>
+      </article>
+
+      <div class="route-wrap">
+        <h3>Маршрут по сюжету</h3>
+        <div class="route-list" id="routeList"></div>
+      </div>
+
+      <footer class="panel-foot">
+        <span>← → · клик по пину · «Далее» в балуне</span>
+      </footer>
+    </aside>
+
+    <div id="map" role="application" aria-label="Карта маршрута"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
