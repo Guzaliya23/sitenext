@@ -33,7 +33,32 @@
       font-weight: 500;
       margin-bottom: 0.6rem;
     }
-    .lead { color: var(--muted); margin-bottom: 2rem; max-width: 42ch; line-height: 1.5; }
+    .lead { color: var(--muted); margin-bottom: 1.5rem; max-width: 44ch; line-height: 1.5; }
+    .howto {
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .howto h2 {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .howto ol { margin: 0.4rem 0 0.6rem 1.2rem; color: var(--muted); }
+    .howto code {
+      font-size: 0.85em;
+      background: rgba(44, 62, 107, 0.08);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+    }
+    .howto a { color: var(--accent); }
     .grid { display: grid; gap: 0.9rem; }
     a.card {
       display: block;
@@ -67,41 +92,61 @@
       font-size: 0.8rem;
       color: var(--muted);
     }
+    footer a { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="wrap">
     <p class="eyebrow">Literary & film maps</p>
     <h1>Маршруты по Петербургу</h1>
-    <p class="lead">Хронологические карты: точки сюжета, точность локации и «далее» по маршруту на Яндекс.Картах.</p>
+    <p class="lead">Хронологические карты: точки сюжета или биографии, точность локации и «далее» по маршруту.</p>
+
+    <section class="howto">
+      <h2>Как поправить уехавшую точку</h2>
+      <p>Админки нет — правь координаты в файле <code>maps/…/data/locations.json</code>.</p>
+      <ol>
+        <li>Открой JSON нужной карты (например <code>maps/brodsky/data/locations.json</code>).</li>
+        <li>Найди точку по названию или <code>"order"</code>.</li>
+        <li>В Яндекс.Картах: ПКМ → «Что здесь?» → скопируй широту и долготу.</li>
+        <li>Вставь в <code>"lat"</code> и <code>"lng"</code> (сначала широта, потом долгота).</li>
+        <li>Сохрани и обнови страницу. На сайт — после выкладки на GitHub.</li>
+      </ol>
+      <p>Подробнее: <a href="EDITING.md">EDITING.md</a></p>
+    </section>
+
     <div class="grid">
+      <a class="card" href="brodsky/">
+        <span class="tag">Биография</span>
+        <h2>Бродский</h2>
+        <p>Ленинград по годам: Мурузи, «Кресты», Норенская, Пулково + блок эмиграции текстом.</p>
+      </a>
       <a class="card" href="we-the-living/">
         <span class="tag">Книга</span>
         <h2>Мы живые</h2>
         <p>Айн Рэнд · Петроград / Ленинград 1920-х — от вокзала до границы.</p>
-      </a>
-      <a class="card" href="brat/">
-        <span class="tag">Фильм</span>
-        <h2>Брат</h2>
-        <p>Алексей Балабанов · Приозерск и Петербург 1997 — вокзал, «Рок-остров», беседка Гофмана.</p>
-      </a>
-      <a class="card" href="mister-oformitel/">
-        <span class="tag">Фильм</span>
-        <h2>Господин оформитель</h2>
-        <p>Олег Тепцов · Серебряный век на экране — Фолленвейдер, Юсуповский, Петровский мост.</p>
       </a>
       <a class="card" href="dostoevsky-lurie/">
         <span class="tag">Книга / гид</span>
         <h2>Петербург Достоевского</h2>
         <p>Лев Лурье · Сенная, Столярный, дом Раскольникова, музей на Кузнечном.</p>
       </a>
+      <a class="card" href="brat/">
+        <span class="tag">Фильм</span>
+        <h2>Брат</h2>
+        <p>Алексей Балабанов · Приозерск и Петербург 1997.</p>
+      </a>
+      <a class="card" href="mister-oformitel/">
+        <span class="tag">Фильм</span>
+        <h2>Господин оформитель</h2>
+        <p>Олег Тепцов · Фолленвейдер, Юсуповский, Петровский мост.</p>
+      </a>
       <a class="card" href="piter-fm/">
         <span class="tag">Фильм</span>
         <h2>Питер FM</h2>
-        <p>Оксана Бычкова · мансарда, Фонтанка, дом Капустина, радио на Васильевском.</p>
+        <p>Оксана Бычкова · мансарда, Фонтанка, дом Капустина.</p>
       </a>
     </div>
-    <footer>Демо-карты · как двигать точки: <a href="EDITING.md">EDITING.md</a> · SiteNext</footer>
+    <footer>SiteNext · карты на Яндекс.Картах</footer>
   </div>
 </body>
 </html>
