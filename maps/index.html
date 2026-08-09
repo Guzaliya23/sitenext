@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Карты по книгам и фильмам</title>
+  <style>
+    :root {
+      --ink: #1c2433;
+      --muted: #5c677a;
+      --paper: #f4f1ea;
+      --line: rgba(28, 36, 51, 0.12);
+      --accent: #2c3e6b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(700px 360px at 10% 0%, rgba(44, 62, 107, 0.1), transparent),
+        var(--paper);
+      min-height: 100vh;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+    .wrap { width: min(820px, 100%); margin: 0 auto; }
+    .eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #8b2e2e; font-weight: 700; margin-bottom: 0.4rem;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+    .lead { color: var(--muted); margin-bottom: 2rem; max-width: 42ch; line-height: 1.5; }
+    .grid { display: grid; gap: 0.9rem; }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.25rem 1.3rem;
+      transition: border-color .2s, transform .2s;
+    }
+    a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    a.card .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+    a.card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+    a.card p { color: var(--muted); font-size: 0.95rem; line-height: 1.45; }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Literary & film maps</p>
+    <h1>Маршруты по Петербургу</h1>
+    <p class="lead">Хронологические карты: точки сюжета, точность локации и «далее» по маршруту на Яндекс.Картах.</p>
+    <div class="grid">
+      <a class="card" href="we-the-living/">
+        <span class="tag">Книга</span>
+        <h2>Мы живые</h2>
+        <p>Айн Рэнд · Петроград / Ленинград 1920-х — от вокзала до границы.</p>
+      </a>
+      <a class="card" href="brat/">
+        <span class="tag">Фильм</span>
+        <h2>Брат</h2>
+        <p>Алексей Балабанов · Приозерск и Петербург 1997 — вокзал, «Рок-остров», беседка Гофмана.</p>
+      </a>
+      <a class="card" href="mister-oformitel/">
+        <span class="tag">Фильм</span>
+        <h2>Господин оформитель</h2>
+        <p>Олег Тепцов · Серебряный век на экране — Фолленвейдер, Юсуповский, Петровский мост.</p>
+      </a>
+    </div>
+    <footer>Демо-карты · ключ Яндекс.Карт общий · SiteNext</footer>
+  </div>
+</body>
+</html>
